@@ -1,0 +1,18 @@
+{
+    "headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "max-age=0",
+        "content-type": "application/x-www-form-urlencoded",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-user": "?1",
+        "sec-gpc": "1",
+        "upgrade-insecure-requests": "1",
+        "cookie": "__ddgid_=BWn2Jrm1R2SgDq5t; __ddgmark_=izRq8CemhKMVIDQK; __ddg2_=wQRYeNuu0kNbo327; __ddg1_=o3crsLmlTQjFV4nkMsEw; .AspNetCore.Antiforgery.2kyQ2nmXF04=CfDJ8OFEelwqO9BPpKC87G2EVLpa-yG9BRTxtaGFkPyXAZ_cPNccFA0s9VPgnNh2ECCqIxuLIRbSQURFpVToxamxO0tcXWZ1jCNBAa7htwLrKvpNSqGmRO0_X4eA5v2ypHZF80LShC1rX_gnPWwm--QRIRM; _ym_uid=1650976791336509734; _ym_isad=1",
+        "Referer": "https://freemp3cloud.com/downloader",
+        "Referrer-Policy": "strict-origin-when-cross-origin"
+    },
+    "token": "CfDJ8OFEelwqO9BPpKC87G2EVLqSfk5yatSaj63fCCXHv_Z66mAa-BsNmaHYa3cB6dtjNCNK9n0uzwDdwuMzXXCjxDB3OvyIx7X-izY1xz6kDqUFQQhzZiaj5SyFfG7fdZF7P6d4QAgVbsAWvQ71lAVFTsU"
+}
