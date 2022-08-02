@@ -1,6 +1,6 @@
-from fcloud import search
 import requests
 import time
+from fcloud import search
 
 
 def test_results_sustainibility(q):
@@ -27,3 +27,7 @@ def test_url(url):
         r.raise_for_status()
         print(i, end="\r")
         i += 1
+
+
+for s in search("bad guy billie eilish"):
+    print(s.name, s.artist, s.url)
