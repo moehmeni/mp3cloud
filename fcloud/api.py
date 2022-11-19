@@ -66,13 +66,22 @@ def get_search_soup(q: str):
     return soup
 
 
-def search(q) -> List[Song]:
+def search(q, limit: int = None) -> List[Song]:
     soup = get_search_soup(q)
-    tags = soup.find_all("div", {"class": "play-item"})
+    tags = soup.find_all("div", {"class": "play-item"}, limit=limit)
+    songs = []
     for tag in tags:
         name = tag.find("div", {"class": "s-title"}).get_text()
         artist = tag.find("div", {"class": "s-artist"}).get_text()
         url = tag.find("div", {"class": "downl"}).find("a")["href"]
         duration = tag.find("div", {"class": "s-time"}).get_text()
-        hq = tag.find("div", {"class": "s-hq"}) is not None
-        yield Song(name=name, artist=artist, url=url, duration=duration, hq=hq)
+        is_high_quality = tag.find("div", {"class": "s-hq"}) is not None
+        song = Song(
+            name=name,
+            artist=artist,
+            url=url,
+            duration=duration,
+            is_high_quality=is_high_quality,
+        )
+        songs.append(song)
+    return songs
