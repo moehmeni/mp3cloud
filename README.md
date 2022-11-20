@@ -1,5 +1,5 @@
 # FreeMp3Cloud.com Downloader
-A light-weight wrapper around FreeMp3Cloud.com to download songs by the given query.
+A lightweight wrapper around FreeMp3Cloud.com to download songs by the given query.
 
 ## Installation
 ```
@@ -8,6 +8,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+### CLI
 Downloading a song:
 ```
 python fcloud "[TRACK_NAME] [ARTIST_NAME]"
