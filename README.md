@@ -3,7 +3,7 @@ A lightweight wrapper around FreeMp3Cloud.com to download songs by the given que
 
 ## Installation
 ```
-git clone https://github.com/nastyrose/fcloud.git && cd fcloud
+git clone https://github.com/rtcq/fcloud.git && cd fcloud
 pip install -r requirements.txt
 ```
 
