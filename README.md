@@ -18,11 +18,18 @@ Getting all the URLs provided for the query gathered in a `.txt` file:
 python fcloud "[TRACK_NAME] [ARTIST_NAME]" --save_urls --no_download
 ```
 ### Python programs
+Seeing the results of the query:
 ```py
 from fcloud import search
 
-for song in search("[TRACK_NAME] [ARTIST_NAME]"):
+songs = search("[TRACK_NAME] [ARTIST_NAME]")
+for song in songs:
     print(song.name, song.artist, song.url, song.is_high_quality)
+```
+To download a song:
+```py
+from fcloud.utils import download_song
+download_song(songs[0])
 ```
 
 ## Todo
