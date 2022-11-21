@@ -35,3 +35,4 @@ download_song(songs[0])
 ## Todo
 - [ ] Multithreaded download/search for bulk operations
 - [ ] Filter by quality
+- [ ] Install via `pip`
