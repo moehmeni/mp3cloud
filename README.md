@@ -24,7 +24,7 @@ from fcloud import search
 
 songs = search("[TRACK_NAME] [ARTIST_NAME]")
 for song in songs:
-    print(song.name, song.artist, song.url, song.is_high_quality)
+    print(song.name, song.artist, song.url, song.duration, song.is_high_quality)
 ```
 To download a song:
 ```py
