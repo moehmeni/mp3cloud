@@ -1,4 +1,4 @@
-# FreeMp3Cloud.com Downloader
+# FreeMp3Cloud Downloader
 A lightweight wrapper around [FreeMp3Cloud.com](https://freemp3cloud.com) to download songs by the given query.
 
 ## Installation
