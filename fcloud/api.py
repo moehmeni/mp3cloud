@@ -1,3 +1,5 @@
+"""API utils"""
+
 from typing import List
 import requests
 from bs4 import BeautifulSoup
@@ -67,7 +69,7 @@ def get_search_soup(q: str):
 
 
 def search(q: str, limit: int = None) -> List[Song]:
-    """Searches and returns a list of `Song`s for the given query if available on the site."""
+    """Searches and returns a list of `fcloud.objects.Song`s for the given query if available on the site."""
     soup = get_search_soup(q)
     tags = soup.find_all("div", {"class": "play-item"}, limit=limit)
     songs = []
