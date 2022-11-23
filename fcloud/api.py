@@ -45,15 +45,15 @@ search_headers = {
 session = requests.Session()
 
 
-def soup_of(url, headers):
+def get_soup(url: str, headers: dict = None):
     r = session.get(url, headers=headers)
     r.raise_for_status()
     return BeautifulSoup(r.text, "html.parser")
 
 
-def get_token():
-    soup = soup_of(home_url, home_headers)
-    token = soup.find("input", {"name": "__RequestVerificationToken"})["value"]
+def get_token() -> str:
+    soup = get_soup(home_url, home_headers)
+    token = soup.find("input", {"name": "__RequestVerificationToken"}).get("value")
     return token
 
 
@@ -66,7 +66,8 @@ def get_search_soup(q: str):
     return soup
 
 
-def search(q, limit: int = None) -> List[Song]:
+def search(q: str, limit: int = None) -> List[Song]:
+    """Searches and returns a list of `Song`s for the given query if available on the site."""
     soup = get_search_soup(q)
     tags = soup.find_all("div", {"class": "play-item"}, limit=limit)
     songs = []

@@ -1,5 +1,14 @@
 class Song:
-    def __init__(self, name, artist, url, duration=0, is_high_quality=False):
+    """Represents song properties"""
+
+    def __init__(
+        self,
+        name: str,
+        artist: str,
+        url: str,
+        duration: int = 0,
+        is_high_quality: bool = False,
+    ):
         self.name = name
         self.artist = artist
         self.url = url

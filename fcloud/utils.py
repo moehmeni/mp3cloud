@@ -2,7 +2,6 @@ import logging
 import requests
 import os
 from rich import progress
-
 from fcloud.api import search
 
 
