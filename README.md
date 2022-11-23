@@ -1,5 +1,5 @@
 # FreeMp3Cloud.com Downloader
-A light-weight wrapper around FreeMp3Cloud.com to download songs by the given query.
+A lightweight wrapper around FreeMp3Cloud.com to download songs by the given query.
 
 ## Installation
 ```
