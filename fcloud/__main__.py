@@ -28,14 +28,14 @@ if __name__ == "__main__":
         default=True,
     )
     parser.add_argument(
-        "--no_download",
+        "--no-download",
         help="Use this flag if you DO NOT want the song to be downloaded",
         action="store_false",
         dest="download",
     )
     parser.add_argument(
         "-s",
-        "--save_urls",
+        "--save-urls",
         help="Use this flag if you want to save a .txt file containing all the found URLs of the songs",
         action="store_true",
     )

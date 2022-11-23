@@ -14,7 +14,7 @@ python fcloud "[TRACK_NAME] [ARTIST_NAME]"
 ```
 Getting all the URLs provided for the query gathered in a `.txt` file:
 ```
-python fcloud "[TRACK_NAME] [ARTIST_NAME]" --save_urls --no_download
+python fcloud "[TRACK_NAME] [ARTIST_NAME]" --save-urls --no-download
 ```
 ### Python programs
 ```py
