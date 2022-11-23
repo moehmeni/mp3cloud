@@ -25,4 +25,5 @@ for song in search("[TRACK_NAME] [ARTIST_NAME]"):
 ```
 
 ## Todo
+- [ ] Setting metadata for the downloaded song
 - [ ] Filter by quality
