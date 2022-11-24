@@ -2,7 +2,7 @@ import logging
 import requests
 import os
 from rich import progress
-from fcloud.api import search
+from .api import search
 
 
 def save_urls_in(results: list, path: str = "urls.txt"):

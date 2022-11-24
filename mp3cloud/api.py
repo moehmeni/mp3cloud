@@ -3,7 +3,7 @@
 from typing import List
 import requests
 from bs4 import BeautifulSoup
-from fcloud.objects import Song
+from .objects import Song
 
 home_url = "https://vww.freemp3cloud.com/"
 

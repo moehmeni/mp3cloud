@@ -3,24 +3,23 @@ A lightweight wrapper around [FreeMp3Cloud.com](https://freemp3cloud.com) to dow
 
 ## Installation
 ```
-git clone https://github.com/rtcq/fcloud.git && cd fcloud
-pip install -r requirements.txt
+pip install mp3cloud
 ```
 
 ## Usage
 ### CLI
 Downloading a song:
 ```
-python fcloud "[TRACK_NAME] [ARTIST_NAME]"
+python -m mp3cloud "[TRACK_NAME] [ARTIST_NAME]"
 ```
 Getting all the URLs provided for the query gathered in a `.txt` file:
 ```
-python fcloud "[TRACK_NAME] [ARTIST_NAME]" --save-urls --no-download
+python -m mp3cloud "[TRACK_NAME] [ARTIST_NAME]" --save-urls --no-download
 ```
 ### Python programs
 Seeing the results of the query:
 ```py
-from fcloud import search
+from mp3cloud import search
 
 songs = search("[TRACK_NAME] [ARTIST_NAME]")
 for song in songs:
@@ -28,7 +27,7 @@ for song in songs:
 ```
 To download a song:
 ```py
-from fcloud.utils import download_song
+from mp3cloud.utils import download_song
 download_song(songs[0])
 ```
 

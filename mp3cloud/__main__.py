@@ -4,7 +4,7 @@ import os
 import logging
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-from fcloud.utils import parse_args
+from mp3cloud.utils import parse_args
 
 
 def valid_q(arg):
