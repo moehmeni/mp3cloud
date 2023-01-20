@@ -1,4 +1,6 @@
 # FreeMp3Cloud Downloader
+[![Downloads](https://pepy.tech/badge/mp3cloud)](https://pepy.tech/project/mp3cloud)
+
 A lightweight wrapper around [FreeMp3Cloud.com](https://freemp3cloud.com) to download songs by the given query.
 
 ## Installation
