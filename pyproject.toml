@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mp3cloud"
-version = "0.1.0"
+version = "0.1.1"
 description = "Search and download any music from freemp3cloud.com"
 authors = ["Momo <lo3me@proton.me>"]
 license = "MIT"

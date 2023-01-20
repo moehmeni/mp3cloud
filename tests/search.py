@@ -41,3 +41,4 @@ if __name__ == "__main__":
     q = "Billie eilish bad guy"
     # test_results_sustainibility(q)
     test_results_for(q)
+

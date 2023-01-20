@@ -5,6 +5,7 @@ A lightweight wrapper around [FreeMp3Cloud.com](https://freemp3cloud.com) to dow
 ```
 pip install mp3cloud
 ```
+**`cURL` should be installed too**
 
 ## Usage
 ### CLI

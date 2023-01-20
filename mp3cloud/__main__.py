@@ -3,14 +3,36 @@ import sys
 import os
 import logging
 
+
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-from mp3cloud.utils import parse_args
+
+from mp3cloud.utils import download_song, save_urls_in
+from mp3cloud.api import search
 
 
 def valid_q(arg):
     if len(arg) < 2:
         raise argparse.ArgumentTypeError("should be at least 2 characters")
     return arg
+
+
+def parse_args(args):
+    results = []
+    i = 0
+    # Sometimes there's no any song fetched.
+    while not results and i < 4:
+        if i > 1:
+            logging.info("No result found. Retrying...")
+        results = search(args.query)
+        i += 1
+    if not results:
+        raise SystemExit(
+            f"Unfortunately no result found for '{args.query}'. Try again please, it happens sometimes!"
+        )
+    if args.save_urls:
+        save_urls_in(results)
+    if args.download:
+        download_song(results[0])
 
 
 if __name__ == "__main__":

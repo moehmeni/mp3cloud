@@ -1,8 +1,11 @@
 import logging
 import requests
+import subprocess
 import os
+from pathlib import Path
 from rich import progress
-from .api import search
+
+# from .api import search
 
 
 def save_urls_in(results: list, path: str = "urls.txt"):
@@ -49,20 +52,6 @@ def download_song(song, path: str = None):
     download_url(song.url, file_name)
 
 
-def parse_args(args):
-    results = []
-    i = 0
-    # Sometimes there's no any song fetched.
-    while not results and i < 4:
-        if i > 1:
-            logging.info("No result found. Retrying...")
-        results = search(args.query)
-        i += 1
-    if not results:
-        raise SystemExit(
-            f"Unfortunately no result found for '{args.query}'. Try again please, it happens sometimes!"
-        )
-    if args.save_urls:
-        save_urls_in(results)
-    if args.download:
-        download_song(results[0])
+def shell_call(cmd: str) -> str:
+    _cmd = "bash " + str(Path(Path(__file__).parent / ("scripts/" + cmd)).resolve())
+    return subprocess.check_output(_cmd, shell=True).decode("utf-8")
