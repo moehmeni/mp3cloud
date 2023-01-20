@@ -5,7 +5,7 @@ A lightweight wrapper around [FreeMp3Cloud.com](https://freemp3cloud.com) to dow
 ```
 pip install mp3cloud
 ```
-**`cURL` should be installed too**
+**Note `cURL` should be installed**
 
 ## Usage
 ### CLI
@@ -35,3 +35,5 @@ download_song(songs[0])
 ## Todo
 - [ ] Setting metadata for the downloaded song
 - [ ] Filter by quality
+- [ ] Checking the availablity of cURL
+- [ ] Add docs for the functions
